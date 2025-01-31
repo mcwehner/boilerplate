@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "boilerplate",
+    "description": "Boilerplate chrome extension",
+    "version": "1.0.0",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage",
+        "unlimitedStorage",
+        "sidePanel"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "css": ["content.css"]
+        }
+    ]
+}
