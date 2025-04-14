@@ -5,7 +5,8 @@
     "type": "module",
     "scripts": {
         "prebuild": "rm -rf dist",
-        "build": "node esbuild.build.mjs"
+        "build": "node esbuild.build.mjs",
+        "watch": "node esbuild.build.mjs --watch"
     },
     "devDependencies": {
         "@types/chrome": "^0.0.280",

@@ -4,7 +4,7 @@ To get started, clone this repository and run the following commands:
 
 ```bash
 npm install
-npm run build
+npm run watch # or npm run build
 ```
 
 This will install the necessary dependencies and build the extension. You can then load the extension in Chrome by following these steps:

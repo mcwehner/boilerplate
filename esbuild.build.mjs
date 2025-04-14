@@ -24,4 +24,14 @@ const buildOptions = {
     },
 };
 
-esbuild.build(buildOptions).catch((error) => process.exit(1));
+if (process.argv.includes("--watch")) {
+    const ctx = await esbuild.context(buildOptions);
+    await ctx.watch();
+
+}
+else {
+    esbuild.build(buildOptions).catch((error) => {
+        console.error(error);
+        process.exit(1);
+    });
+}
